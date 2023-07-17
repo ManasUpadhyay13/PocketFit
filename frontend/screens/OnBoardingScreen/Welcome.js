@@ -1,26 +1,55 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity } from 'react-native'
 import globalStyles from "../../globalStyles";
-import Button from "../../components/Button";
 import { AntDesign } from '@expo/vector-icons';
-
+import TextComponent from "../../components/TextComponent";
 
 const Welcome = () => {
     return (
         <View style={globalStyles.container} >
-            <View style={globalStyles.wrapper} >
+            <View style={[globalStyles.wrapper, {
+                justifyContent: "flex-end"
+            }]} >
 
                 <Image
                     source={require("../../assets/images/welcome.png")}
-                    style={{
-                        width: 400,
-                        height: 400
-                    }}
+                    style={globalStyles.image}
                 />
 
-                <TouchableOpacity style={globalStyles.touchableOpacity} >
-                    <Button text="Get Started" />
-                    <AntDesign name="arrowright" size={24} color="black" />
+                <View
+                    style={{
+                        alignItems: "center",
+                        gap: 10,
+                    }}
+                >
+
+
+                    <TextComponent
+                        text="Welcome to"
+                        color="black"
+                    />
+
+                    <TextComponent
+                        text="POCKET KIT"
+                        color="#A076F9"
+                        fontWeight={800}
+                        fontSize={30}
+                    />
+
+                    <TextComponent
+                        text="Your all in one solution for all your budgeting needs"
+                        color="black"
+                    />
+
+                </View>
+
+
+                <TouchableOpacity
+                    style={globalStyles.touchableOpacity}
+                    
+                >
+                    <TextComponent text="Get started" fontWeight={600} />
+                    <AntDesign name="arrowright" size={24} color="white" />
                 </TouchableOpacity>
 
 
