@@ -4,6 +4,8 @@ import { StyleSheet } from "react-native";
 
 const globalStyles = StyleSheet.create({
 
+
+
     // styles for containers
 
     container: {
@@ -11,60 +13,56 @@ const globalStyles = StyleSheet.create({
         width: '100%',
         alignItems: "center",
         paddingHorizontal: 25,
-        paddingVertical: 45
+        paddingVertical: 45,
+        backgroundColor : "white"
     },
     wrapper: {
         width: '100%',
+        height : "100%",
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "space-around",
+        flexWrap : "wrap",
+        gap : 20,
     },
 
 
     // styles for components
 
     image: {
-        width: "50%"
+        width : "100%",
+        height : "40%"
     },
     touchableOpacity: {
-        width: "100%",
+        height: 50,
+        width: "60%",
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
         flexDirection: "row",
-        gap: 20
+        gap: 10,
+        backgroundColor: "#A076F9",
+        borderRadius: 20,
+        shadowColor: "#000000",
+        shadowOffset: {
+            width: 0,
+            height: 5,
+        },
+        shadowOpacity: 0.20,
+        shadowRadius: 5.62,
+        elevation: 7
     },
+
 
 
     // Styles for text
 
-    heading: {
-        fontWeight: "bold",
-        fontSize: 30,
-        color: "#E66A79"
+    textPrimary : {
+        color :  "#A076F9"
     },
-
-    subtitle1: {
-        fontWeight: "bold",
-        fontSize: 20,
-        color: "#E66A79"
-    },
-
-    subtitle2: {
-        fontWeight: "medium",
-        fontSize: 20,
-        color: "#E66A79"
-    },
-
-    text: {
-        fontWeight: "semibold",
-        fontSize: 16,
-    },
-
-    description: {
-        fontWeight: "medium",
-        fontSize: 13
+    textSecondary : {
+        color : "#B79CF2"
     }
-
+    
 
 })
 
