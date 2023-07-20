@@ -1,8 +1,10 @@
 import React from 'react';
 import { View, KeyboardAvoidingView, TextInput, StyleSheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { MyContext } from './context/MyContext';
-import Demo from './Demo';
+import { MyProvider } from './context/context'
+import { NavigationContainer } from '@react-navigation/native';
+import MenuNavigator from './MenuNavigator';
+
 
 export default function App() {
   return (
@@ -12,9 +14,15 @@ export default function App() {
     >
       <StatusBar style="auto" />
 
-      <MyContext>
-        <Demo />
-      </MyContext>
+      <MyProvider>
+
+        <NavigationContainer>
+
+          <MenuNavigator/>
+
+        </NavigationContainer>
+        
+      </MyProvider>
 
     </KeyboardAvoidingView>
   );
