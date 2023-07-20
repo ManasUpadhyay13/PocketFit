@@ -25,7 +25,7 @@ const TabLabel = ({ focused, label }) => {
   return null;
 };
 
-const MenuNavigator = () => {
+const MenuNavigator = ({ setShowMenuNavigator }) => {
 
   function getWidth() {
 
@@ -121,7 +121,7 @@ const MenuNavigator = () => {
           component={EmptyComponent}
           options={{
             tabBarIcon: ({ focused }) => (
-              <View
+              <TouchableOpacity
                 style={{
                   width: 55,
                   height: 55,
@@ -131,14 +131,14 @@ const MenuNavigator = () => {
                   alignItems: "center",
                   marginBottom: 40
                 }}
-
+                onPress={() => setShowMenuNavigator(false)}
               >
                 <Feather
                   name="plus"
                   size={26}
                   color="white"
                 />
-              </View>
+              </TouchableOpacity>
             ),
           }}
         >
