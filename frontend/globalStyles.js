@@ -11,10 +11,7 @@ const globalStyles = StyleSheet.create({
     container: {
         flex: 1,
         width: '100%',
-        alignItems: "center",
-        paddingHorizontal: 25,
-        paddingVertical: 45,
-        backgroundColor : "white"
+        padding : 20
     },
     wrapper: {
         width: '100%',
